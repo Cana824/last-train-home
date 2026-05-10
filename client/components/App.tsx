@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Game from './Game'
 
 function App() {
