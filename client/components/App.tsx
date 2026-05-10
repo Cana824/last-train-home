@@ -1,12 +1,6 @@
-import { Outlet } from 'react-router'
+import Game from './Game'
 
 function App() {
-  return (
-    <div>
-      <h1>App Header</h1>
-      <Outlet />
-    </div>
-  )
+  return <Game />
 }
-
-export default App
+export default App 
