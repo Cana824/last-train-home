@@ -1,0 +1,292 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to bottom, #0f172a, #020617);
+  color: #f8fafc;
+}
+
+.game-container {
+  min-height: 100vh;
+
+  background-image: url('/images/traintracks.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 40px;
+  overflow: hidden;
+}
+.game-container::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(2, 6, 23, 0.72);
+
+  z-index: 0;
+}
+
+.game-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+.title-box {
+  width: 420px;
+  border: 3px solid #475569;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 40px;
+  background: #1e293b;
+  box-shadow:
+    0 0 10px rgba(56, 189, 248, 0.15),
+    0 0 20px rgba(56, 189, 248, 0.08);
+}
+
+.title-box h1 {
+  margin: 0;
+  color: #f8fafc;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+.story-box {
+  width: 550px;
+  border: 3px solid #475569;
+  border-radius: 30px;
+  padding: 25px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-shadow:
+    0 0 15px rgba(0, 0, 0, 0.35),
+    0 0 30px rgba(15, 23, 42, 0.4);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.story-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.68);
+  z-index: 0;
+}
+
+.story-box > * {
+  position: relative;
+  z-index: 1;
+}
+
+.scene-image {
+  min-height: 260px;
+
+  border-radius: 20px;
+  border: 2px solid #64748b;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  margin-bottom: 25px;
+}
+
+.scene-text {
+  width: 420px;
+  min-height: 180px;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+
+  padding: 28px;
+
+  border-radius: 20px;
+
+  background: rgba(15, 23, 42, 0.55);
+
+  backdrop-filter: blur(3px);
+
+  color: white;
+
+  line-height: 1.8;
+  font-size: 1.05rem;
+
+  box-shadow:
+    0 0 20px rgba(0, 0, 0, 0.35);
+}
+
+.scene-text p {
+  margin: 0;
+}
+
+.train-lights {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 0 8px;
+}
+
+
+
+.choices-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.choice-button {
+  border: 2px solid #64748b;
+  border-radius: 16px;
+  background: #334155;
+  color: #f8fafc;
+  padding: 14px 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.choice-button:hover {
+  background: #475569;
+  border-color: #38bdf8;
+  transform: scale(1.02);
+}
+
+.inventory-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.inventory-pill {
+  border: 2px solid #64748b;
+  border-radius: 20px;
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inventory-image {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #475569;
+  background: #1e293b;
+}
+
+.inventory-pill p {
+  margin: 0;
+}
+
+
+.train-lights {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  margin: -12px 0 20px 0;
+  padding: 0 10px;
+}
+
+.light {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  background: #facc15;
+  border: 3px solid #1e293b;
+
+  box-shadow:
+    0 0 10px #fde047,
+    0 0 20px #facc15,
+    0 0 40px rgba(250, 204, 21, 0.5);
+}
+
+.scene-image::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(2, 6, 23, 0.72);
+
+  z-index: 0;
+}
+
+.ending-counter {
+  margin-bottom: 20px;
+
+  padding: 10px 18px;
+
+  border-radius: 16px;
+
+  background: rgba(15, 23, 42, 0.75);
+
+  border: 2px solid #475569;
+
+  color: #f8fafc;
+
+  font-size: 0.95rem;
+
+  box-shadow:
+    0 0 12px rgba(56, 189, 248, 0.15);
+}
+
+.reset-button {
+  margin-top: 12px;
+
+  border: 2px solid #64748b;
+
+  border-radius: 16px;
+
+  background: #1e293b;
+
+  color: #f8fafc;
+
+  padding: 12px 18px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.reset-button:hover {
+  background: #334155;
+  border-color: #38bdf8;
+}

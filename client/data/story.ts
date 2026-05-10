@@ -1,5 +1,6 @@
 const story = {
   start: {
+    image: '/images/traintracks.png',
     texts: [
       "It's nearly midnight, you're trying to catch the last train. You arrive at a nearly empty train station. Your phone battery is on 3%, and you sigh, it was a long day. You walk over to a bin to throw some receipts away and notice the overfilled bin. Sitting right on top of the trash is a bundle of loose, slightly grimy wires.",
     ],
@@ -16,6 +17,7 @@ const story = {
   },
 
   pickedWires: {
+    image: '/images/scrapwires.png',
     texts: [
       'Ew.. why did you do that?',
       "A breeze picks up — it's cold.",
@@ -33,6 +35,7 @@ const story = {
   },
 
   ignoredWires: {
+    image: '/images/scrapwires.png',
     texts: [
       'You ignore the wires and shove your old receipts in the bin.',
       "A breeze picks up — it's cold.",
@@ -51,6 +54,7 @@ const story = {
   },
 
   hallway: {
+     image: '/images/hallway.png',
   texts: [
     'You step into the dimly lit hallway away from the wind. Beside a fallen cleaning cart sits a station keycard.',
   ],
@@ -68,6 +72,7 @@ const story = {
 },
 
 leftKeycard: {
+   image: '/images/keycard.png',
   texts: [
     'You decide to leave the keycard where it is - someone will come back for it.',
     'Further down the corridor, you see two faint lights. To your right, you also notice a heavy metal door marked TUNNEL ACCESS.',
@@ -79,7 +84,7 @@ leftKeycard: {
     },
      {
       text: 'Head to the heavy metal door marked TUNNEL ACCESS',
-      next: 'noKeycard',
+      next: 'tunnelDoor',
     },
     {
       text: 'Return to the platform',
@@ -89,6 +94,8 @@ leftKeycard: {
 },
 
 faintLights: {
+  image: '/images/faintlights.png',
+  
   texts: [
     'You see a damaged robot covered in dust. Its eyes give off the faint glow as if asking for help.',
   ],
@@ -105,6 +112,7 @@ faintLights: {
 },
 
 pickedKeycard: {
+  image: '/images/keycard.png',
   texts: [
     'You pick up the station keycard and slip it into your pocket.',
     'Further down the corridor, you see two faint lights. To your right, you also notice a heavy metal door marked TUNNEL ACCESS.',
@@ -126,6 +134,7 @@ pickedKeycard: {
 },
 
 robotFixed: {
+  image: '/images/aliverobot.png',
   texts: [
     'You reconnect the loose wires into the robot panel.',
     'The robot whirs to life, dust shaking from its metal frame.',
@@ -150,6 +159,7 @@ robotFixed: {
 },
 
 robotFriend: {
+  image: '/images/aliverobot.png',
   texts: [
     'You point back toward the platform.',
     'The robot pauses, then gives a small cheerful beep.',
@@ -163,31 +173,6 @@ robotFriend: {
     {
       text: 'Return to the platform with the robot',
       next: 'platformWithRobot',
-    },
-  ],
-},
-
-trustRobot: {
-  texts: [
-    'It leads you toward two heavy metal doors deep inside the station.',
-  ],
-  choices: [
-    {
-      text: 'Enter Tunnel Access',
-      next: 'tunnelDoor',
-    },
-  ],
-},
-
-dontTrustRobot: {
-  texts: [
-    'Uh.. No thank you...',
-    'The robot watches silently as you return to the freezing platform.',
-  ],
-  choices: [
-    {
-      text: 'You back away from the robot',
-      next: 'thinkingOfRobot',
     },
   ],
 },
